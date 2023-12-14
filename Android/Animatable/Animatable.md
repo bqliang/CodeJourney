@@ -1,5 +1,5 @@
 ---
-title: Animatable
+title: "Animatable"
 date: 2023-12-12T00:59:00+08:00
 ---
 
@@ -29,7 +29,7 @@ var isSmall by remember { mutableStateOf(true) }
 // val size by animateDpAsState(targetValue = if (small) 100.dp else 200.dp)
 val animatableSize = remember {
     Animatable(
-        initialValue = if (isSmall) 100.dp else 200.dp，
+        initialValue = if (isSmall) 100.dp else 200.dp, 
         typeConverter = Dp.VectorConverter
     )
 }
@@ -79,7 +79,7 @@ Box(
 var isSmall by remember { mutableStateOf(true) }
 val animatableSize = remember {
     Animatable(
-        initialValue = if (isSmall) 100.dp else 200.dp，
+        initialValue = if (isSmall) 100.dp else 200.dp, 
         typeConverter = Dp.VectorConverter
     )
 }
@@ -150,7 +150,7 @@ var isSmall by remember { mutableStateOf(true) }
 val size = remember(isSmall) { if (isSmall) 100.dp else 200.dp }
 val animatableSize = remember {
     Animatable(
-        initialValue = size，
+        initialValue = size, 
         typeConverter = Dp.VectorConverter
     )
 }
